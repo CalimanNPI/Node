@@ -1,0 +1,9 @@
+npm install -g typescript 
+
+tsc -v verifca la versión
+tsc app.js  compila el archivo
+tsc app.js -w  //wacth
+
+
+inferencia de datos -> tipos de datos 
+

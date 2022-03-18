@@ -1,0 +1,50 @@
+<div class="row">
+  {{#if errors}}
+  <div class="col-sm-6">
+    <div class="card mt-4 text-center">
+      <div class="card-body">
+
+        <h5 class="card-title">New Note</h5>
+        <form action="/notes/new-note" method="post">
+          <div class="mb-3">
+            <label for="title" class="form-label">Title</label>
+            <input type="text" class="form-control" id="title" name="title" value="{{title}}"/>
+          </div>
+          <div class="mb-3">
+            <label for="note" class="form-label">Note</label>
+            <textarea class="form-control" id="note" rows="3" name="description">{{description}}</textarea>
+          </div>
+          <div class="mb-3">
+            <button type="submit" class="btn btn-primary btn-sm">Submit</button>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </div>
+{{else}}
+
+<div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+
+        <h5 class="card-title">New Note</h5>
+        <form action="/notes/new-note" method="post">
+          <div class="mb-3">
+            <label for="title" class="form-label">Title</label>
+            <input type="text" class="form-control" id="title" name="title"/>
+          </div>
+          <div class="mb-3">
+            <label for="note" class="form-label" >Note</label>
+            <textarea class="form-control" id="note" rows="3" name="description"></textarea>
+          </div>
+          <div class="mb-3">
+            <button type="submit" class="btn btn-primary btn-sm">Submit</button>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </div>
+  {{/if}}
+</div>

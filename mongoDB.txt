@@ -1,0 +1,78 @@
+Agregar al path a mongo para poder ejecutarlo 
+
+mongo(d) --version "Muestra la version de mongo que tenemos"
+
+Creamos una carpeta llamada "data"  en el disco C:\ y dentro de esta carpeta creamos otra carpeta llamada "db".
+
+Ejecutamos "mongod" para ejecutar el servidor y poder conectarnos a la bd y hacer uso de esta.
+
+en otra consola ejecutamos el comando "mongo" para poder conectarnos a la db y en windos tenemos dar enter en la primera consola para poder conectarnos ala db desde esta consoola.
+
+la db se encarga de almacenar todos los datos relacionados con algun programa.
+
+Collection - es una coleccion de informacion, como los usuarios, productos, categorias, etc. "en SQL se le denominan tablas", estas  colecciones guardan la informacion objetos JSON que se les llama Documets.
+
+DB      ->  Collections ->   Documents
+Store  ->  Users          ->   { },{ },{ },{ }
+
+Comandos 
+
+db-> muestra la db que se esta usando actualmente 
+
+show dbs ->muestra las db que se encuentran creadas 
+
+use webstore -> crea una db nueva
+
+db.dropDatabase() -> elimina la db actual ""
+
+db.help()
+
+show collections -> muestra las colecciones que tenemos
+
+db.createCollection("users")-> crea una colección
+
+db.users.drop()-> elimina la coleccion seleccionada 
+
+db.users.count()
+insertar una dato-------------------------------------------------------
+db.products.insert({"name":"laptop"})
+db.products.insert([{"name":"laptop"}, {"name":"laptop"}, {"name":"laptop"}])
+
+Buscar--------------------------------------------------------
+db.user.find() -> muestra el contenido de la coleccion
+db.user.find({"name":"laptop"})
+db.user.find({"name":"laptop", "tags":"pc"})
+db.user.findOne({"name":"laptop"}, {"name": 1, "tags": 0}) los numeros son si aparecen o no en la consulta  1 = si  0 = no
+db.user.find().pretty() -> muestra  el objeto completo donde esta la informacion
+
+db.user.find({"name":"laptop"}).sort({name: 1})
+db.user.find({"name":"laptop"}).limit(1)
+
+db.user.find({"name":"laptop"}).count()
+
+db.user.find().forEach(user => print("User :" + user.name))
+
+Actualizar -------------------------------------------------
+db.user.update({"name": "laptop"},{ "price":99.99}) -> actualiza todo y no permanece el contenido anterior 
+
+db.user.update({"name": "laptop"},{ $set:{"price":99.99} })
+
+db.user.update({"name": "mochilita"},{ $set:{"descripcion": "asdasd"}, {upsert: true} })->inserta el dato si es que no lo encuentra 
+
+db.user.update({"name": "laptop"},{ $inc:{"price":0.01} })-> incrrementa el dato numerico
+
+db.user.update({"name": "laptop"},{ $rename:{"price":"culo"} })
+
+
+Eliminar-----------------------------*--------------------------------------
+db.user.remove({"name": "laptop"})Eliminar el dato seleccionado 
+db.user.remove({})Eliima todos los  documentos 
+
+
+
+**************************************************
+SEGURIDAD INFORMATICA
+**************************************************
+El HTTPS no es otra cosa que el mismo protocolo de transferencia de hipertexto pero seguro, protegido por el protocolo criptográfico TLS.
+
+Evita que la informacion sea interpretada.
