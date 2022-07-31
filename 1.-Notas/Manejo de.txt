@@ -1,0 +1,16 @@
+Manejo de eventos en nodejs se usa la librería <events>
+Ejecutar procesos "moverte como en la consola" require(child_proces).exec
+Manejo de archivos  lectura, escritura y crear, streams  <fs>
+
+
+Manejas variables de entornocon un archivo
+.env  dentro de este se piden configurar información sensible como en laravel y uasaela requiriendo el siguiente módulo de nodejs  
+require(dotenv).config() 
+PROCESOS.ENV.PORT O TOKEN
+
+Ir tutorial de los  tokens jwt
+
+
+Librería underscore.js
+View engine pug, mustache 
+Cross-origin resource sharing (cors)

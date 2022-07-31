@@ -1,0 +1,7 @@
+Https es el protocolo de seguridad que proteje a la información entre el cliente y el navegador de ser interpreta, dicha información está cifrada y protegida por el protocolo tls contiene un parte de llaves (pública y privada) asimétricas
+Se verifica el certificado 
+Se genera pre-máster secrect 
+Se crea la llave compartida máster secret) .
+
+
+Servidor web. Es el software que se encarga de despachar el contenido de un  sitio web al usuario

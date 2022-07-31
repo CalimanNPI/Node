@@ -1,0 +1,80 @@
+Normaliza ión de base de datos relacional 
+Primera forma normal
+1 eliminar los campos repetidos  de las tablas individuales
+2 crear una tabla independiente por cada conjunto de datos
+3 identificar los datos con una clave principal
+
+Segunda forma
+1 Tener la primera forma
+2 tener tablas independientes para conjuntos de valores que se aplican a varios registros
+3 relacionar esta tablas con un identificador externo
+
+Tercera forma
+1 Tener la segunda forma
+2 eliminar los campos que no dependan de la clave
+
+ACID
+Atomicidad, consistencia, aislamiento y durabilidad. Son propiedades de las bsas de datos relacionales aportan de los sistemas y kes permiten ser más robustos y menos vulnerables ante fallos 
+
+
+Bases de datos no relacionales. 
+Son aquellas que no se encuentran relacionadas con otras tablas o colecciones como le llaman. 
+
+
+ORM
+Object Ralational Mapping, es un modelo de programación que consiste en la transformación de las tablas de las basas de datos en una serie de entidades que simplifique las tareas básicas de acceso a los datos para el programador  
+
+ORM Sequelize
+
+ODM  es lo mismo que un ORM pero destinado a bases de datos no relacionales
+
+ODM Mongoose
+
+
+Frondend es la parte visual con la que el usuario interactiva con el software
+
+Backend  está en focado en los procesos que se ejecutan en el servidor
+
+Framework un conjunto de funcionalidades que ayudan al desarrollo de una aplicación
+
+¿Que es una Api? 
+
+Qué es una Restful
+
+Arquitectura de software : cliente servidor,  capas, de bus de eventos, intérprete, maestro esclavo, etc. 
+
+Arquitectura de n capas 
+1 presentación 
+2 aplicación 
+3 negocio 
+4 datos 
+
+Clientes / servidor
+El cliente a hace una petición y servidor manda la respuesta todo esto mediante el protocolo tcp/ip
+
+Arquitectura monolítico 
+Un único ejecutable lógico, una sola unidad Autónoma 
+
+Arquitectura de microservicios 
+Colección de servicios pequeños y autónomos
+
+Características :
+Persistencia 
+Logs
+Api diseñada 
+Responsable único 
+Resiliencia 
+
+Ventajas:
+Deploys transparente 
+Fácil de escalar 
+Combinación de tecnologías
+Potencial confiable 
+
+Desventaja:
+Difícil de testear
+Integridad de información 
+Posibilidades de duplicado 
+Equipo especializado 
+
+Backend, I/O, Serverless, CI/CD, RabbitMQ, Https, Cloud, Doker, Kubernetes, noSQL, Git y DevOps

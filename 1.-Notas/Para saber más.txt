@@ -1,0 +1,52 @@
+Para saber más de un comando en git es escribir
+Git toma snapshots 
+Tres etapas de git 
+1 working director y se hace git add
+2 staging área y se hace git commit
+3 repository
+
+Git help 'comando'
+Git config - - global user.name
+Git config - - global user.email
+Git config - - global - e  abre el archivo de configuración de git pará salir ":q" sin guardar.
+Con - l solo muestra la información del archivo 
+
+Git config - -global alias.s "status -s -b"  agrega alias a para acortar los comandos 
+
+Git init inicia el repositorio y crea la carpeta donde se registran los cambios 
+
+Git status.  
+Con -s muestra sólo los nombres 
+-b muestra la rama actual 
+
+Git add .  Añade los archivos modificado, 
+Git add (lista de archivos) se especifica el archivo o la lista de archivos separados por espacios 
+Git add *.png añade todos los archivos con ese tipo de extensión  en el directorio actual 
+Git add "*.png" añade todos los archivos con esa extensión de todo el repositorio 
+Git add css/ añade todos los archivos de esa carpeta, de igual forma se puede especificar el tipo de archivo o la extensión de este. 
+Git add -A o - all agregar todos los archivos 
+Git reset *.png excluye todos los archivos  de escenario con esa extensión 
+Git add index.js - - patch agrega fragmentos de código 
+
+Git diff ver cambios de un archivo 
+
+Git commit - m "primer commit" registra los cambios realizados, el - m es para agregar un mensaje este debe ir en tiempo presente y haciendo referencia a lo realizado. 
+
+Git checkout - - . Regresa los cambios al último commit
+
+Git log muestra el historial de commits de el más  reciente al más antiguo 
+Git log - - oneline forma corta 
+Git log - - oneline - - decorate  - -all - - graph muestra más información y con otro formato  con el 2 y 4 comando  el 3 muestra todo 
+Git log - -stat muestra el resumen de cambios en los commits 
+Git log -p cambios en el código en los commits
+Git branch "nombre" crea una nueva rama  
+Git checkout  "nombre"  cambio de rama 
+Git checkout -b "nombre" cambia de rama y hace 3l cambio
+Git marge combina las ramas, se debe estar en la rama que se va hacer la combinación y no se debe tener archivos pendientes
+Git push empuja el código al repositorio remoto 
+Git pull
+Git clone
+Git remotwe url vincula un repositorio de git
+Git remite - v muestra el historial de los commit
+
+.gitignore se ignoran los archivos que se mencionen en dentro de este.
