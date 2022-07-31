@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            position: relative;
+            top: 30px;
+            left: 30px;
+
+            width: 50%;
+            height: 50%;
+            border: 3px solid black;
+            opacity: 0.8;
+
+            /*filtros*/
+            filter: blur(1px);
+            filter: brightness(1);/*brillo*/
+            filter: contrast(1);/*contraste*/
+            filter: drop-shadow(20px 10px 4px grey);/*sombra*/
+            filter: grayscale(90%);/*escala de grises */
+            filter: hue-rotate(12deg);/*no entendi*/
+            filter: invert(0.1);
+        }
+
+        /*background*/
+        body{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            background: radial-gradient(circle,#02aaf2, #4602f2, #9e3686);
+            background-color: #000;
+            border-radius: 7px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            /*background-image: url(1_asteroid_field.jpg);*/
+            /*background-repeat: no-repeat;*/
+           /* background-position: 10px 20px;/*posicion eje x e y*/
+            /*background-attachment: fixed;/* si esta fija el background o no */
+            /*background-size: contain;/*especifica el tamaño de la imagen sinafectar la calidad */
+            /*background-clip: border-box;
+            background-origin: border-box;
+            background-blend-mode: soft-light;*/
+        }
+    </style>
+</head>
+<body>
+    <img src="1_asteroid_field.jpg" alt="">
+</body>
+</html>

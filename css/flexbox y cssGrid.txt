@@ -1,0 +1,145 @@
+display: flex;
+--------------------------------------------
+Alinea elementos horizontalmente
+justify-content: flex-end;
+
+Alinea elementos verticalmente 
+align-items
+
+flex-start: Alinea elementos al lado izquierdo del contenedor.
+flex-end: Alinea elementos al lado derecho del contenedor.
+center: Alinea elementos en el centro del contenedor.
+space-between: Muestra elementos con la misma distancia entre ellos.
+space-around: Muestra elementos con la misma separación alrededor de ellos.
+
+--------------------------------------------------------------------
+Esta propiedad CSS define la dirección de los elementos en el contenedor,
+flex-direction.
+
+row: Elementos son colocados en la misma dirección del texto.
+row-reverse: Elementos son colocados en la dirección opuesta al texto.
+column: Elementos se colocan de arriba hacia abajo.
+column-reverse: Elementos se colocan de abajo hacia arriba.
+
+-----------------------------------------------------
+A veces, invertir el orden de una fila o columna de un contenedor no es suficiente. En esos casos, nosotros podemos aplicar la propiedad Order a elementos individuales. Por defecto, los elementos tienen un valor 0, pero nosotros podemos usar esta propiedad para establecerlo a un número entero positivo o negativo.
+
+order:2;
+
+--------------------------------------------------------
+Otra propiedad que puedes aplicar a elementos individuales es align-self. Esta propiedad acepta los mismos valores de align-items y sus valores son usados para un elemento específico
+
+align-self:flex-end;
+
+-----------------------------------
+la cual acepta los siguientes valores
+ flex-wrap
+
+nowrap: Cada elemento se ajusta en una sola línea.
+wrap: los elementos se envuelven alrededor de líneas adicionales.
+wrap-reverse: Los elementos se envuelven alrededor de líneas adicionales en reversa.
+
+----------------------------------------------------
+Las dos propiedades flex-direction y flex-wrap son usadas a menudo en conjunto con la propiedad abreviada flex-flow, la cual fue creada para combinarlas. Esta propiedad abreviada, acepta un valor de cada una separada por un espacio.
+
+--------------------------------------------------
+ Puedes usar align-content para establecer como múltiples líneas están separadas una de otra. Esta propiedad acepta los siguientes valores:
+
+flex-start: Las líneas se posicionan en la parte superior del contenedor.
+flex-end: Las líneas se posicionan en la parte inferior del contenedor.
+center: Las líneas se posicionan en el centro (verticalmente hablando) del contenedor.
+space-between: Las líneas se muestran con la misma distancia entre ellas.
+space-around: Las líneas se muestran con la misma separación alrededor de ellas.
+stretch: Las líneas se estiran para ajustarse al contenedor.
+
+
+
+
+
+
+
+
+
+
+**************************************** CSS Grid *******************************************************************
+display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  grid-template-rows: 20% 20% 20% 20% 20%;
+
+Usa grid-column-start para envenenarlas. Fíjate en que las malas hierbas comienzan en el quinto borde vertical de la cuadrícula.
+
+grid-column-start:5;
+grid-column-start:-3;
+
+Puedes extender el elemento varias columnas añadiendo la propiedad 
+grid-column-end:4;
+
+puedes establecerlos a -1 para indicar la primera línea comenzando por la derecha. grid-column-end:-2;
+
+-----------------------------
+span solo funciona con valores positivos.
+grid-column-end: span 2;
+
+---------------------------------------
+grid-column: 2 / 4; establecerá el comienzo del elemento de la cuadrícula en la 2ª línea vertical de esta, y su final en la 4ª línea vertical.
+
+grid-column:span 3/5;
+
+--------------------------------------------------
+Grid-row-start funciona de manera semejante a grid-column-start pero a lo largo del eje vertical.
+
+grid-row-start:3;
+
+grid-row:3/6;
+
+----------------------------------------------------------
+grid-area admite cuatro valores separados por barras oblicuas: 
+grid-row-start, grid-column-start, grid-row-end, grid-column-end.
+
+Un ejemplo de esto podría ser grid-area: 1 / 1 / 3 / 6;.
+
+---------------------------------------------
+Por defecto, el valor de order de todos los elementos es igual a 0, pero puede ser establecido a cualquier valor positivo o negativo, de manera similar a z-index.
+
+order:1;
+
+----------------------------------------------
+Hasta este momento, has tenido un jardín formado por cinco columnas, cada una ocupando el 20% de la anchura total, y cinco filas, cada una ocupando el 20% de la altura total.
+
+Esto ha sido establecido con las propiedades grid-template-columns: 20% 20% 20% 20% 20%; y grid-template-rows: 20% 20% 20% 20% 20%;. Cada propiedad tiene cinco valores que crean cinco columnas, cada una establecida al 20% de la anchura total del jardín.
+
+Pero puedes establecer los valores en la cuadrícula como quieras. Da a grid-template-columns un nuevo valor para regar tus zanahorias. Querrás que la anchura de la primera columna sea del 50%.
+
+grid-template-columns:repeat(8,12.5%);
+
+grid-template-columns no acepta solo valores porcentuales, sino también otras unidades como pixels y ems. Incluso puedes mezclar diferentes unidades a la vez.
+
+Establece tres columnas a 100px, 3em, y 40% respectivamente.
+
+grid-template-columns:100px 3em 40%;
+
+--------------------------------------------------
+CSS Grid también introduce una nueva medida, la fracción fr. Cada unidad fr asigna una porción del espacio disponible. Por ejemplo, si dos elementos están establecidos a 1fr y 3fr respectivamente el espacio se divide en 4 porciones iguales; el primer elemento ocupa 1/4 del espacio y el segundo elemento los 3/4 restantes.
+
+Ahora las malas hierbas ocupan 1/6 de tu primera fila y las zanahorias los restantes 5/6. Crea dos columnas con ese ancho empleando fr.
+
+grid-template-columns:.6fr 3fr;
+
+Cuando algunas columnas son establecidas en píxeles, porcentajes o ems, cualquier otra columna establecida con fr dividirá el espacio restante.
+
+Aquí las zanahorias forman una columna de 50 píxeles a la izquierda, y las malas hierbas una columna de 50 píxeles a la derecha. Mediante grid-template-columns, crea esas dos columnas y usa fr para crear tres columnas más en el espacio que queda entre ellas.
+
+grid-template-columns:50px 1fr 1fr 1fr 50px
+
+grid-template-columns:75px 3fr 2fr;
+
+
+grid-template-rows funciona exactamente igual que grid-template-columns.
+
+Usa grid-template-rows para regar todo excepto los 50 píxeles de la parte superior de tu jardín. Fíjate que el agua se ha establecido para que llene solo la 5ª fila, por lo que tendrás que crear 5 filas en total.
+
+--------------------------------------------------
+grid-template es una propiedad abreviada que combina grid-template-rows y grid-template-columns.
+
+Por ejemplo, grid-template: 50% 50% / 200px; creará una cuadrícula con dos filas que ocuparán el 50% del alto cada una, y una columna que será 200 píxeles de ancho.
+

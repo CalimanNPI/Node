@@ -1,0 +1,206 @@
+/*
+1 padding: tiene cuatro argumentos (sup, der, inf, izq)
+2 position: Las propiedades top, right, bottom, y left determinan la ubicación final de los elementos posicionados.
+3 box-shadow tiene 4 argumentos (eje x, eje y, efecto blur, color)
+4 y 5 Pseudo-Clases clase:elemento y Pseudo-elementos clase::elemento
+6 float ubica el contenido  none, left, right, inline-start, inline-end
+7 transition 
+8 margin y padding tiene 4 argumentos  
+8 border-radius recibe 4 argumentos  al poner el 50% se crea un circulo
+9 transform muchos metodos transform: matrix(1,2,3,4,5,6,7,8,9) translate(120px, 100%) scale(2, .5) rotate(0.5turn) skew(30deg, -30deg), scale(0.5);
+10 @keyframes identifier 
+
+@media (max-width: 500px) {
+*/
+
+med
+*{
+  color: whitesmoke !important;
+}
+body {
+  padding: 0px;
+  margin: 0px;
+  font-family: 'Courier New', Courier, monospace;
+  background: rgb(194, 106, 154);
+}
+header {
+  background: fuchsia;
+  padding: 5px;
+  margin: 10px;
+  text-align: center;
+}
+
+#objeto0 {
+  width: 350px;
+  height: 350px;
+  padding: 20px 10px 20px 10px; /*(sup, der, inf, izq)*/
+  border: 6px solid black;
+  margin-left: 5%;
+  margin-right: 10%;
+  position: static;
+  
+}
+
+#objeto1 {
+  width: 300px;
+  height: 300px;
+  background-color: rgb(161, 40, 161);
+  color: #ffff;
+  font-size: xx-large;
+  padding: 45px 45px;
+  position: relative;
+  top: 40px;
+  left: 40px;
+}
+#objeto2 {
+  width: 300px;
+  height: 300px;
+  background-color: rgb(25, 135, 190);
+  color: #ffff;
+  position: absolute;
+  top: 40px;
+  left: 40px;
+}
+#objeto3 {
+  width: 300px;
+  height: 300px;
+  background-color: rgb(10, 103, 150);
+  color: #ffff;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 10px;
+}
+#objeto4 {
+  width: 300px;
+  height: 200px;
+  background-color: rgb(10, 103, 150);
+  color: #ffff;
+  position: absolute;
+  top: 50px;
+  z-index: 1;
+}
+#objeto5 {
+  width: 300px;
+  height: 200px;
+  background-color: rgb(67, 221, 144);
+  color: #ffff;
+  position: absolute;
+  top: 250px;
+  left: 90px;
+  z-index: 3;
+}
+#objeto6 {
+  width: 300px;
+  height: 200px;
+  background-color: rgb(150, 10, 138);
+  color: #ffff;
+  position: absolute;
+  left: 40px;
+  top: 150px;
+  z-index: 2;
+}
+
+
+/**SeleCtor desCendente*/
+section p {
+  background-color: aliceblue;
+}
+
+/**SeleCtor hijo*/
+section > p {
+  background: aqua;
+}
+
+/**SeleCtor hermano*/
+h1 + p {
+  background: black;
+}
+/**SeleCtor hermano en gral*/
+h1 p {
+  background: black;
+}
+
+#objeto7 {
+  width: 250px;
+  height: 350px;
+  background: blue;
+  box-shadow: 10px 20px 40px rebeccapurple;
+  position: relative;
+  z-index: 1;
+}
+
+/*pseudo clase*/
+#objeto7:hover {
+  box-shadow: 10px 20px 40px rebeccapurple;
+}
+
+/*pseudo elementos*/
+#objeto7::after {
+  content: "holi";
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  left: 0%;
+  bottom: 70%;
+  background: burlywood;
+  z-index: -1;
+}
+#objeto7::before {
+  content: "holi 2";
+  position: absolute;
+  top: 70%;
+  right: 0%;
+  left: 0%;
+  bottom: 0%;
+  background: cadetblue;
+  z-index: -1;
+}
+
+
+section{
+  position: absolute;
+  top: 20%;
+  left: 30%;
+}
+
+ div{
+   width: 200px;
+   height: 100px;
+   float: left;
+   text-align: center;
+   box-sizing: border-box;
+   padding-top: 40px;
+   margin-right: 20px;
+   margin-bottom: 20px;
+   border: 2px solid white;/*recibe 3 parametros (tamaño, estilo, color)*/
+   transition: width 2s;
+   transition-timing-function:ease-in-out;
+   transition-delay: 2s;
+   transition-delay: 2s;
+   transition-property: all;
+ }
+
+ div:hover{
+   width: 400px;
+ }
+
+ /*Columnas*/
+ article{
+  padding-top: 20px;
+  column-count: 3;/*numeros de columnas */
+  column-gap: 20px;/*cuanto acupan */
+  column-rule: dotted 4px #ccc;/* decoración*/
+ }
+
+ /*
+ hace referencia al tamaño de pantalla, se adapta al tamaño de pantaña sin importar el tamaño de esta
+ vh = viewport height
+ vw = viewport width
+
+ em = el tamaño base va hacer referido a la capa padre, son unidades que estan basadas en otras 
+ proporcional
+
+
+ rem es lo mismo solo que toma como base el selector :root{}
+ 
+ */

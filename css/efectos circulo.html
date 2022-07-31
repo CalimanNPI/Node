@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        color: antiquewhite !important;
+      }
+      body {
+        background: #9455cf;
+        padding: 0%;
+        margin: 0%;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+      header {
+        margin: 10px;
+        padding: 5px;
+        background: #f55de1;
+        text-align: center;
+      }
+
+      .box {
+        content: "Caja";
+        width: 150px;
+        height: 250px;
+        box-shadow: 0 1px 10px rgb(0, 0, 0, 0.12),
+          0 10px 20px rgb(0, 0, 0, 0.24);
+        position: relative;
+        top: 100px;
+        left: 230px;
+      }
+
+      section {
+        margin: 10px;
+        display: flex;
+      }
+
+      #caja1 {
+        background: #33e59b;
+        z-index: 2;
+      }
+
+      #caja1::after {
+        content: "hola numero 2";
+        width: 100%;
+        height: 100px;
+        position: absolute;
+        bottom: 0%;
+        background: #1c7e55;
+        transition: all 1.3s ease 0s;
+      }
+      #caja1:hover::after {
+        content: "";
+        height: 100%;
+      }
+
+      #caja2 {
+        background: #6495ed;
+        z-index: 3;
+        margin-left: 100px;
+      }
+
+      #caja2::after {
+        content: "hola numero 2";
+        width: 100%;
+        height: 100px;
+        position: absolute;
+        bottom: 0%;
+        background: #3c588d;
+        transition: all 1.3s ease 0s;
+      }
+
+      #caja2:hover::after {
+        content: "";
+        height: 100%;
+      }
+
+      #circulo {
+        width: 250px;
+        height: 250px;
+        background-color: #01e460;
+        position: relative;
+        top: 190px;
+        left: 200px;
+        box-shadow: 0 1px 10px rgb(0, 0, 0, 0.12),
+          0 10px 20px rgb(0, 0, 0, 0.24);
+        border-radius: 50%;
+      }
+
+      .onda {
+        background-position: center;
+        transition: background 0.8s;
+      }
+      .onda:hover {
+        background: #00c676 radial-gradient(circle, transparent 1%, #00c676 1%)
+          center/15000%;
+      }
+
+      .onda:active {
+        background-color: #00c853;
+        background-size: 100%;
+        transition: background 0s;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Curso de CSS</h1>
+    </header>
+    <section>
+      <div id="caja1" class="box"></div>
+      <div id="caja2" class="box"></div>
+    </section>
+    <div id="circulo" class="onda"></div>
+  </body>
+</html>

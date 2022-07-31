@@ -1,0 +1,214 @@
+composer global require laravel/installer
+
+laravel new example-app
+
+cd example-app
+
+php artisan serve
+
+
+
+php artisan make:auth
+
+genera 5 rutos login gest post, logout port, register get post, apuntan alos controladores por defecto en laravel
+
+php artisan migrate:rollback --step=1 /// elimina las tablas, --step solo elimina la primera o la que se le indique 
+
+php artisan migrate:fresh
+
+php artisan make:migation add_phone_to_users_table// _to se utiliza para hacer referencia que se va a editar la tabla y laravel ayuda con ese palabra clave  o --table=users es lo mismo 
+
+para sqllite se tiene que ejecutar el comando composer require doctrine/dbal
+
+npm i, npm run dev. solo si hay que intslar dependencias 
+
+ php artisan r:l
+
+php artisan make:controller PerfilesController -h // los metodos disponibles
+
+
+ App\Providers\AppServiceProvider
+use Illuminate\Support\Facades\Schema;
+Schema::defaultStringLength(191);
+
+you may use the --migration or -m option:
+php artisan make:model Flight --migration
+
+# # Generate a model and a FlightFactory class...
+php artisan make:model Flight --factory
+php artisan make:model Flight -f
+
+# Generate a model and a FlightSeeder class...
+php artisan make:model Flight --seed
+php artisan make:model Flight -s
+
+# Generate a model and a FlightController class...
+php artisan make:model Flight --controller
+php artisan make:model Flight -c
+
+# Generate a model and a migration, factory, seeder, and controller...
+php artisan make:model Flight -mfsc
+
+# Shortcut to generate a model, migration, factory, seeder, and controller...
+php artisan make:model Flight --all
+
+# Generate a pivot model...
+php artisan make:model Member --pivot
+
+
+
+php artisan make:controller PhotoController --resource
+
+php artisan make:migration create_flights_table
+
+
+php artisan tinker
+Psy Shell v0.10.8 (PHP 8.0.5 — cli) by Justin Hileman
+>>> User::factory()->create(['email' => 'danteshield2@gmail.com
+[!] Aliasing 'User' to 'App\Models\User' for this Tinker sessio
+     #password: "$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi",
+     #remember_token: "RYF8fNgTIf",
+     updated_at: "2021-09-19 01:29:25",
+     created_at: "2021-09-19 01:29:25",
+     id: 1,
+   }
+>>>
+composer dumpautoload// si se modifica el archivo conposer.json
+
+
+Pensado para validar formularios complejos
+Son clases dedicadas para encapsular la lógica de validación y autorización
+
+mada el error HTTP respinse 403 Forbidden(Prohibido) si el methodo authorice  es falso
+
+php artisan  make:request LoginRequest
+authorice =true// se leda la condicion para poder pasar a la validacion
+ return [ validaciones ]
+
+funcion a validar store(LoginRequest $LoginRequest)
+
+php artisan make:resource BlogResource
+
++++++++++++++++Models++++++++++++++++++++++++++++
+Si desea especificar una conexión diferente que debe usarse
+ protected $connection = 'sqlite';
+
+protected $attributes = [
+        'delayed' => false,
+    ];
+
+protected $fillable = ['name'];
+
+protected $table = 'my_flights';
+
+protected $primaryKey = 'flight_id';
+
+  public $incrementing = false;
+
+ protected $keyType = 'string';
+
+ public $timestamps = false;
+
+protected $guarded = [];//es como fillable pero quita las atributos de asignacion masiva 
+
+Esta propiedad determina cómo se almacenan los atributos de fecha en la base de datos
+protected $dateFormat = 'U';
+
+Si necesita personalizar los nombres de las columnas utilizadas para almacenar las marcas de tiempo
+const CREATED_AT = 'creation_date';
+    const UPDATED_AT = 'updated_date';
+
+ protected $hidden = [
+        'password',
+        'remember_token',
+    ];
+
+
+los seeder nos ayudan a insertar datos desde una cierta estructura 
+php artisan make:seeder SeederTablaPermisos
+
+php artisan db:seed --class=SeederTablaPermisos 
+
+php artisan make:event EmpresaSelect
+php artisan make:listener EmpresaListener 
+
+
+filesystem
+y modificar la ruta a public
+php artisan storage:link
+
+composer require guzzlehttp/guzzle
+
+src="{{ Storage::url($user->avatar)}}"
+
+toDataString(); para convertir fechas 
+
+
+descargar archivos
+
+return response()->download($pathToFile);
+return response()->download($pathToFile, $name, $headers);
+
+return response()->file($pathToFile);
+return response()->file($pathToFile, $headers);
+
+************************VUE.js******************************
+descargar CFDIs
+descomprimir
+leer
+guardar
+consultar 
+
+npm i vue  vue-router vue-axios
+
+ejecutar el comando despues de  realizar toda la configuracion 
+npm update vue-loader
+
+npm i vue
+npm i vue-router    
+npm i vue-loader
+
+npm install -S vue-sweetalert2  
+
+*********************** producción***********************************
+
+npm run prod
+
+php artisan config:cache
+php artisan route:cache
+php artisan view:cache
+
+
+********************************Errors ****************************************
+
+422 (Unprocessable Entity) Ese error se produce cuando su solicitud falla en la validación
+
+
+**************************PHP*********************************
+$values = [1,2,3,4,5,6]
+ Metodos de PHP de arrays
+array_values()
+array_filter()
+array_map()
+
+$collection = collec($values)
+->filter(function($value){// filtra el arrreglo
+return $value %2 ==0;
+})
+->map(function($value){//realiza una accion con el arreglo
+return $value *2;
+})
+->values()//quita los identificadores
+->all();//regresa un areglo
+
+
+
+//******
+carpeta errors en view y personalizr los errores
+
+Projet::paginate(4);//pagina
+
+como se muestran la paginacion
+
+
+    {{ $itemsTitle->links() }}
