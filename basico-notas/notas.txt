@@ -1,0 +1,85 @@
+Auténticación de múltiples factores, 
+De conocimiento - algo que los usuarios saben 
+De posesión - algo que los usuarios tienen 
+De inherencia algo que el usuario es
+De ubicación de donde está intentando acceder
+De tiempo cuando está tratando de acceder 
+
+El objetivo es dificultar el acceso a una persona no autorizado a un cuenta o lugar. 
+
+Auténticación de dos factores consiste en generar códigos de un solo uso que se deben introducir para poder ingresar al sitio.
+
+Yubikey es una llave que se debe introducir al momento de acceder al cualquier sitio web ()factor de posicionamiento)
+
+
+/** CI y CD **/
+CI continuos integration integración continua
+Consiste en desarrollar nuevas funciones o arreglar bug con forme se detectan. Se prueban para evitar posibles desviaciones para sacarlo a producción de forma automática 
+Cambio 
+Pruebas unitarias 
+Integración 
+Aceptación de cambios 
+
+CD continuous delivery o entrega continua
+Consiste en realizar los cambios lo más rápido posible de forma incremental a producción, el deploy es manual 
+Cambio 
+Pruebas unitarias 
+Integración 
+Aceptación de cambios 
+Lanzar a producción. Este es manual 
+
+CD continuous deploy es igual que el anterior solo que en este el lanzamiento es manual
+
+
+/** HTTPS **/
+Https es el protocolo de seguridad que proteje a la información entre el cliente y el navegador de ser interpreta, dicha información está cifrada y protegida por el protocolo tls contiene un parte de llaves (pública y privada) asimétricas
+Se verifica el certificado 
+Se genera pre-máster secrect 
+Se crea la llave compartida máster secret) .
+
+Servidor web. Es el software que se encarga de despachar el contenido de un  sitio web al usuario
+
+/**No se**/
+Metodología de desarrollo 
+Patrones de diseño 
+Patrones de arquitectura
+
+
+Información bidireccional 
+
+/**tipos de datos**/
+Tipos de datos primitivos son caracteres, numenoes enteros, con punto de si al y bolesnos
+
+Tipos de datos compuestos tupla, arreglos y cadenas de texto.
+
+Tipos de datos abstracto diccionario, lista enlazada, doblemente enlazada, enlazd circular, pila, cola (fifo) , árbol binario, montículo (este se ordena de mayor a menor o de menor a mayor) y grafos(aristas)
+
+
+/**Aprender **/
+algoritmos 
+patrones
+estructuras de datos 
+
+
+/** Mejores prácticas **/
+1 no repetir el código (simplificar el proceso)
+2 intentae que las clases o métodos realicen una solo función
+3 realizar pruebas unitarias y haces las no más fáciles pocibles
+4 quitar la lógica de negocio del código
+5 pensar en código abstracto
+6 programar código UE se pueda extender (como con erencis)
+7 no escribir código que no es necesario
+8evitar las dependencias
+9escribir código modular
+10 escribir código como si fuera una api
+
+11 documentar el código
+12 identar
+13 comentar algunas funciones
+14 agrupar código (variables o algo así)
+15 código en inglés
+16 líneas de código muy largas
+17 organizar carpeta
+18 comandas en mayúsculas
+19 combinar OPP y programación funciones 
+20 leer código de proyectos opensource 

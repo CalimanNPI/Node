@@ -1,5 +1,0 @@
-Tipos de datos primitivos son caracteres, numenoes enteros, con punto de si al y bolesnos
-
-Tipos de datos compuestos tupla, arreglos y cadenas de texto.
-
-Tipos de datos abstracto diccionario, lista enlazada, doblemente enlazada, enlazd circular, pila, cola (fifo) , árbol binario, montículo (este se ordena de mayor a menor o de menor a mayor) y grafos(aristas)
